@@ -62,6 +62,7 @@ CREATE TABLE cohorts (
   start_date TEXT
 );
 
+-- Create the users table
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   email TEXT,
@@ -71,10 +72,10 @@ CREATE TABLE users (
   cohort_id INTEGER REFERENCES cohorts(id) ON DELETE SET NULL
 );
 
+
 CREATE TABLE student_info (
   id SERIAL PRIMARY KEY,
   name TEXT,
-  personal_narrative TEXT,
   course_standing TEXT,
   security_clearance TEXT,
   ed_background TEXT,
@@ -97,6 +98,6 @@ CREATE TABLE deliverables (
 CREATE TABLE deliverable_statuses (
   id SERIAL PRIMARY KEY,
   deliverable_id INTEGER REFERENCES deliverables(id),
-  is_completed BOOLEAN,   
+  is_completed BOOLEAN DEFAULT FALSE,
   completed_date TIMESTAMP 
 );

@@ -48,11 +48,11 @@ export default function Cohorts() {
   return (
     <div className="flex bg-gray-900  text-white p-2.5">
       <div className="w-96 h-fit  mt-2 rounded-lg text-center text-2xl flex flex-col items-center bg-gray-800">
-        <h1 className="text-center">Your Cohorts</h1>
+        <h1 className="flex text-center justify-left">Your Cohorts</h1>
         {cohorts.map((cohort) => (
-          <div className="w-80 h-fit rounded-lg text-center items-center bg-gray-700">
+          <div className="flex justify-between w-80 h-fit rounded-lg items-center text-center bg-gray-700">
             <button
-              className="text-center text-xl mb-2"
+              className="text-center text-xl mb-2 ml-4"
               onClick={() => cohortStudents(cohort.id)}
               key={cohort.id}
             >
@@ -61,7 +61,7 @@ export default function Cohorts() {
 
             <button
               onClick={() => deleteCohort(cohort.id)}
-              className=" text-lg"
+              className="text-lg mr-4"
             >
               <BsTrash />
             </button>
@@ -75,7 +75,7 @@ export default function Cohorts() {
         </button>
       </div>
       <div className="flex w-3/4 flex-col h-screen items-center ">
-        <FilterBar />
+        {/* <FilterBar /> */}
         <StudentDisplay />
       </div>
       <ReactModal

@@ -48,7 +48,7 @@ npm install; npm install --prefix=api; npm install --prefix=client - Install all
     
 ## Contributing
 
-#### [@Will Swinson](https://github.com/Will-Swinson) - Project Lead
+#### [@Will Swinson](https://github.com/Will-Swinson) - Backend Development
 
 
 
@@ -56,7 +56,7 @@ npm install; npm install --prefix=api; npm install --prefix=client - Install all
 
 
 
-#### [@Jesse Espinola](https://github.com/Jespinola777) - Frontend Development
+#### [@Jesse Espinola](https://github.com/Jespinola777) - Architecture Owner/Frontend Development
 
 
 
@@ -72,7 +72,7 @@ npm install; npm install --prefix=api; npm install --prefix=client - Install all
 
 
 
-#### [@Jadyn Seelig](https://github.com/Seeligjn) - Frontend Development
+#### [@Jadyn Seelig](https://github.com/Seeligjn) - Product Manager/Frontend Development
 
 
 
@@ -88,7 +88,7 @@ npm install; npm install --prefix=api; npm install --prefix=client - Install all
 
 
 
-#### [@Adrian Pacheco](https://github.com/niodrane25) - Frontend Development
+#### [@Adrian Pacheco](https://github.com/niodrane25) - UI Owner/Frontend Development
 
 
 
