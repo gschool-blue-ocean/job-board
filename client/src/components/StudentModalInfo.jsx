@@ -20,13 +20,20 @@ export default function StudentModalInfo({ student }) {
   return (
     <div className="text-white rounded-lg">
       {deliverables.map((deliverable, index) => (
-        <div className="flex flex-col ml-auto">
-          <div className="flex flex-row space-x-52 justify-center" key={index}>
-            <p>{deliverable.name}</p>
-            <a href={deliverable.url} target="_blank" rel="noopener noreferrer">
+        <div className="flex flex-col" key={index}>
+          <div className="flex flex-row items-center">
+            <p className="flex-shrink-0 w-32">{deliverable.name}</p>
+            <a
+              className="flex-shrink-0 ml-32"
+              href={deliverable.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {deliverable.url}
             </a>
-            <DeliverableStatus index={index} deliverable={deliverable} />
+            <div className="flex-shrink-0 ml-auto">
+              <DeliverableStatus index={index} deliverable={deliverable} />
+            </div>
           </div>
           <div className="border-b border-white w-full mt-4 mb-2"></div>
         </div>
