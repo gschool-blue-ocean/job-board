@@ -37,10 +37,6 @@ const DeliverableStatus = ({ index, deliverable }) => {
       });
   };
 
-  if (!statusData) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div>
       <input

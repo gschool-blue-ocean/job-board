@@ -78,10 +78,10 @@ export default function StudentDisplay() {
 
                 <ProgressBar
                   progressPercentage={
-                    (completedDeliverables[student.id] / 8) * 100
+                    (completedDeliverables[student.id] / 4) * 100
                   }
                 />
-                <div>{(completedDeliverables[student.id] / 8) * 100}%</div>
+                <div>{(completedDeliverables[student.id] / 4) * 100}%</div>
                 <svg
                   data-accordion-icon
                   className={`w-3 h-3 rotate-180 shrink-0 ${
@@ -114,13 +114,15 @@ export default function StudentDisplay() {
             </div>
           </div>
         ))}
-        <button
-          type="button"
-          className="bg-blue-500 text-white rounded-lg px-4 py-2 h-10 "
-          onClick={handleSaveButtonClick}
-        >
-          Save
-        </button>
+        <div className="w-full flex justify-end">
+          <button
+            type="button"
+            className="bg-blue-500 text-white rounded-lg px-4 py-2 h-10 flex "
+            onClick={handleSaveButtonClick}
+          >
+            Save
+          </button>
+        </div>
       </div>
     </div>
   );

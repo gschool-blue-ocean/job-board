@@ -17,7 +17,7 @@ app.get("/api/studentInfo/:id/deliverables/completed", async (req, res) => {
       SELECT COUNT(*) AS completed_deliverables_count
       FROM deliverables AS d
       INNER JOIN deliverable_statuses AS ds ON d.id = ds.deliverable_id
-      WHERE d.student_info_id = ${id} AND ds.is_completed = true;
+      WHERE d.student_id = ${id} AND ds.is_completed = true;
     `;
 
     const completedDeliverablesCount =
@@ -142,7 +142,8 @@ app.get("/api/deliverables", (req, res) => {
 
 app.get("/api/deliverables/:id", (req, res) => {
   const { id } = req.params;
-  sql`SELECT * FROM deliverables WHERE student_info_id = ${id}`
+  console.log(id);
+  sql`SELECT * FROM deliverables WHERE student_id = ${id}`
     .then((result) => {
       console.log(result);
       res.status(200).json(result);
@@ -224,8 +225,8 @@ app.delete("/api/cohorts/:id", async (req, res) => {
 //     console.log("userId:", userId)
 //     console.log("request params:", name, url)
 //     const insertOrUpdateDeliverable = await sql`
-//       UPDATE deliverables 
-//       SET name = ${name}, url = ${url} 
+//       UPDATE deliverables
+//       SET name = ${name}, url = ${url}
 //       WHERE student_id = ${userId}
 //       RETURNING *
 //     `;
@@ -250,15 +251,18 @@ app.post("/api/deliverables", authMiddleware, async (req, res) => {
       VALUES (${userId}, ${name}, ${url}, true)
       RETURNING *
     `;
-
     console.log(insertNewDeliverable);
+    const insertNewDeliverableSatus = await sql`
+    INSERT INTO deliverable_statuses (deliverable_id)
+    VALUES (${insertNewDeliverable[0].id})
+  `;
+    console.log(insertNewDeliverableSatus);
     res.status(200).json(insertNewDeliverable); // Send the inserted data back as a response if needed
   } catch (error) {
     console.error("Error inserting new deliverable:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 });
-
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
