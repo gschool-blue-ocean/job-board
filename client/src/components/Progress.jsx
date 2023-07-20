@@ -2,10 +2,10 @@ import React from "react";
 
 const ProgressBar = ({ progressPercentage }) => {
   let colorClass;
-  if (progressPercentage === NaN) {
+
+  if (isNaN(progressPercentage)) {
     colorClass = "bg-gray-300";
-  }
-  if (progressPercentage >= 100) {
+  } else if (progressPercentage >= 100) {
     colorClass = "bg-green-600";
   } else if (progressPercentage >= 50) {
     colorClass = `bg-gradient-to-r from-red-600 to-yellow-400`;
