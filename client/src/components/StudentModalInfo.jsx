@@ -29,7 +29,7 @@ export default function StudentModalInfo({ student }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {deliverable.url}
+              {deliverable.name}_url
             </a>
             <div className="flex-shrink-0 ml-auto">
               <DeliverableStatus index={index} deliverable={deliverable} />
