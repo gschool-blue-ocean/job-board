@@ -1,7 +1,7 @@
 
 # Blue Ocean Job Manager
 
-This project was built in order to create a way for admins to be able to track what files have been uploaded by certain students in certain cohorts. This project was made with technologies like React.js, JavaScript, Node.js, Express.js, etc..... 
+This website was designed in order to allow students and career services managers the ability to share and update information regarding tools for the job search. As an admin you have the ability to create a Cohort and assign students to it, which allows you to see the students' submitted deliverables (resume, cover letter etc.). From there you have the ability to review what was submitted and mark the item as completed or not completed, allowing for progress tracking of all students in the cohort. For students, you are given the ability to submit your own personal documents/URL's for your assigned career services manager to review. This project was made with technologies like React.js, JavaScript, Node.js, Express.js, etc..... 
 
 
 
