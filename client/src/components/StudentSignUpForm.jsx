@@ -41,8 +41,7 @@ export default function StudentSignUpForm() {
             </label>
             <input
               type="name"
-              className="block w-full px-4 py-2 mt-2  bg-white border rounded-md focus:border-gray-400 focus:ring-gray-300 focus:outline-none focus:ring focus:ring-opacity-40"
-              // className="block w-full px-4 py-2 mt-2 text-white bg-white border rounded-md focus:border-gray-400 focus:ring-gray-300 focus:outline-none focus:ring focus:ring-opacity-40"
+            className="block w-full px-4 py-2 mt-2  bg-white border rounded-md focus:border-gray-400 focus:ring-gray-300 focus:outline-none focus:ring focus:ring-opacity-40"
 
               onChange={(e) =>
                 setStudentForm({ ...studentForm, name: e.target.value })
@@ -75,7 +74,8 @@ export default function StudentSignUpForm() {
             </label>
             <input
               type="password"
-              className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-gray-400 focus:ring-gray-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full px-4 py-2 mt-2  bg-white border rounded-md focus:border-gray-400 focus:ring-gray-300 focus:outline-none focus:ring focus:ring-opacity-40"
+
               onChange={(e) =>
                 setStudentForm({ ...studentForm, password: e.target.value })
               }
