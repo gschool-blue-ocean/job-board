@@ -257,7 +257,7 @@ app.post("/api/deliverables", authMiddleware, async (req, res) => {
     VALUES (${insertNewDeliverable[0].id})
   `;
     console.log(insertNewDeliverableSatus);
-    res.status(200).json(insertNewDeliverable); // Send the inserted data back as a response if needed
+    res.status(200).json(insertNewDeliverable);
   } catch (error) {
     console.error("Error inserting new deliverable:", error);
     res.status(500).json({ error: "Internal server error" });
