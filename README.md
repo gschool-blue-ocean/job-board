@@ -10,6 +10,11 @@ This website was designed in order to allow students and career services manager
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white)       | ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white)          | ![Express.js](https://img.shields.io/badge/-Express.js-000000?logo=express&logoColor=white) | ![React.js](https://img.shields.io/badge/-React.js-61DAFB?logo=react&logoColor=black) | ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
 
+
+## Demo
+
+https://blue-ocean-job-manager-client.onrender.com/
+
 ## Installation
 
 ### - Clone Repository
